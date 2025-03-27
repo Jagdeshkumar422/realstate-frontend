@@ -1,0 +1,256 @@
+.aboutus {
+  position: relative;
+  width: 100%;
+  background-image: url('../../Assets/images/mithi.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100dvh - 125px);
+}
+.aboutus-background {
+  background: rgba(0, 0, 0, 0.58);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  color: white;
+  height: 100%;
+}
+.aboutus-text {
+  text-align: center;
+  font-size: var(--mdm-L-size);
+  padding: 0 20%;
+}
+.aboutus-background h1 {
+  color: var(--primary-light);
+  font-weight: bold !Important;
+  text-align: center;
+  font-size: var(--lrg-size)!important;
+}
+
+
+.aboutus-services-section {
+  background: #0A3D62;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 80px;
+  color: white;
+}
+.aboutus-services-section h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 3%;
+  border-bottom: 2px solid;
+  font-size: calc(var(--lrg-size) - 15px)!important;
+  font-weight: 700!important;
+  margin-top: 50px!important;
+  
+}
+.aboutus-services-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  margin-bottom: 5%;
+  gap: 52px;
+}
+.aboutus-services {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: 300px;
+}
+
+.aboutus-services p{
+  margin-top: 25px!important;
+}
+.aboutus-services-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+.aboutus-services-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  font-size: 1.5rem;
+}
+
+.aboutus-services-text1 {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+  font-size: 1.5rem;
+}
+.aboutus-services-text1 h2 {
+  margin-top: 20%;
+  margin-bottom: 3%;
+  border-bottom: 2px solid;
+  font-weight: 600!important;
+  font-size: 20px !important;
+}
+
+.aboutus-services-text1 p {
+  font-size: 15px !important;
+}
+
+.aboutus-services-text p {
+  font-size: 15px !important;
+}
+
+.aboutus-services-text h2 {
+  margin-top: 20%;
+  margin-bottom: 3%;
+  border-bottom: 2px solid;
+  font-size: 20px !important;
+  font-weight: 600!important;
+}
+.aboutus-blue {
+  color: white;
+}
+.aboutus-yellow {
+  color: #dfd9ab;
+}
+
+.aboutus-services-parent .buttonag{
+  width: fit-content;
+  margin-top: 20px;
+  font-size: 18px;
+  margin-left: 6px;
+}
+.aboutus-services-parent .buttonag:nth-of-type(1){
+  margin-left: 0;
+}
+
+@media only screen and (max-width: 1100px) {
+  .aboutus-services {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: minmax(250px, auto);
+  }
+  .aboutus-services-text {
+    font-size: 1rem;
+  }
+  .aboutus-services-text1 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .aboutus-services {
+    padding: 20px;
+  }
+  .aboutus-services-images {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  .aboutus-services-images::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: rgba(0, 0, 0, 0.78);
+  }
+
+  .aboutus-services-images img{
+    border-radius: 30px;
+  }
+  .aboutus-services-text,
+  .aboutus-services-text1 {
+    margin: 0;
+    grid-column: 1/3;
+    z-index: 4;
+  }
+
+  .aboutus-services-text1 h2,
+  .aboutus-services-text h2 {
+    margin-top: 10%;
+  }
+
+  .aboutus-services-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media all and (max-width:900px) {
+  .aboutus-text{
+    /* width: 75%; */
+    padding: 0 40px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .aboutus-background {
+    gap: 20px;
+  }
+
+  .aboutus{
+    min-height: 70dvh;
+  }
+}
+
+@media all and (max-width:480px) {
+  .aboutus-text{
+    font-size: 5vw!important;
+  }
+}
+
+@media all and (max-width:400px) {
+  
+.aboutus-text {
+  font-size: 1rem;
+  padding-bottom: 40px;
+}
+  .aboutus-background h1{
+    font-size: 30px !important;
+    margin-top: 50px!important;
+  }
+  
+  .aboutus {
+  min-height: calc(100dvh - 235px);
+  height: auto;
+  }
+}
+
+
+@media all and (max-width:900px) and (orientation: landscape){
+  .aboutus{
+    height: auto;
+  }
+
+  .aboutus-background{
+    gap: 20px;
+  }
+
+  .aboutus-background h1{
+    font-size: 40px !important;
+    margin-top: 40px;
+  }
+
+  .aboutus-text{
+    width: 80%;
+    max-width: unset;
+  }
+
+  .cntct_button{
+    width: 50%;
+  }
+
+  .l_form_wrapper{
+    height: auto;
+    padding: 40px;
+  }
+
+  #L_properties{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}

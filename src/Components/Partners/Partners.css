@@ -1,0 +1,85 @@
+.partners-main {
+  background-color: var(--primary-light);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.partners-main h2 {
+  font-size: calc(var(--lrg-size) - 15px) !important;
+  color: var(--primary-dark);
+  font-weight: 700 !important;
+  margin: 80px auto 40px auto !important;
+  width: 85%;
+}
+
+.logo-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.logo-track {
+  display: flex;
+  animation: scroll 60s linear infinite; /* Slow down the animation */
+  width: calc(200px * 54); /* Adjust width based on logo width and count */
+}
+
+.logo-slider:hover .logo-track {
+  /* animation-play-state: paused; Pause the animation on hover */
+}
+
+.partner-logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.partner-logo {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Adjust logo size based on screen width */
+@media (min-width: 550px) {
+  .partner-logo {
+    width: 140px;
+  }
+}
+
+@media (min-width: 800px) {
+  .partner-logo {
+    width: 180px;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .partners-main h2 {
+    text-align: start !important;
+    font-size: calc(var(--lrg-size) - 25px) !important;
+    margin-bottom: 10px !important;
+  }
+
+  .partner-logo {
+    width: 120px;
+  }
+}

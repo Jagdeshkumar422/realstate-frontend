@@ -1,0 +1,64 @@
+.users-page-parent{
+    width: 100% !important;
+    height: 100% !important;
+    background-color: white;
+}
+.users-page-container{
+    margin: 2% 4% !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+.users-page-title{
+    color: black !important;
+    font-size: 32px !important;
+}
+.users-page-header-container{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 10px !important;
+}
+.users-table-container{
+    min-height: 400px !important;
+}
+
+/* Custom styles for the DataTable */
+.users-page-container .p-datatable {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .users-page-container .p-datatable-header {
+    background-color: #80adbb;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .users-page-container .p-datatable-thead > tr > th {
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .users-page-container .p-datatable-tbody > tr > td {
+    padding: 10px;
+    color: #555;
+  }
+  
+  .users-page-container .p-datatable-tbody > tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .users-page-container .p-datatable-tbody > tr:hover {
+    background-color: #eef;
+  }
+  
+  .users-page-container .p-paginator {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  

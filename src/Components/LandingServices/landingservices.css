@@ -1,0 +1,280 @@
+.L_services {
+  min-height: 100dvh;
+  background-color: #0A3D62;
+  z-index: 1;
+  padding-bottom: 40px;
+}
+
+#L_services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.services_container {
+  width: 85%;
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.services_header {
+  margin: 30px 0 0 0 !important;
+  padding: 30px 0px;
+  width: fit-content;
+  color: white;
+}
+.services_cards_wrapper {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+.service_card {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 30px;
+  box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 80%);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.service_card .rbn_btn {
+  width: fit-content;
+}
+
+.service_card:hover > img {
+  transform: scale(1.1);
+}
+
+.service_card img {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s all ease;
+}
+
+.service_card::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.40);
+}
+
+.service_card h2,
+.service_card a {
+  position: relative;
+  z-index: 3;
+}
+
+.service_card h2 {
+  font-size: 30px !important;
+  margin-bottom: 25px;
+  font-weight: 600 !important;
+}
+
+.fade:first-of-type {
+  animation: bounce 0.2s linear;
+  animation-delay: 0.1s;
+}
+
+.fade:nth-of-type(2) {
+  animation: bounce 0.5s linear;
+  animation-delay: 0.3s;
+}
+
+.fade:nth-of-type(3) {
+  animation: bounce 0.5s linear;
+  animation-delay: 0.5s;
+}
+
+.fade:nth-of-type(4) {
+  animation: bounce 0.5s linear;
+  animation-delay: 0.7s;
+}
+
+.fade:nth-of-type(5) {
+  animation: bounce 0.5s linear;
+  animation-delay: 0.9s;
+}
+
+.fade:nth-of-type(6) {
+  animation: bounce 0.5s linear;
+  animation-delay: 1.1s;
+}
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.rbn_btn {
+  transition: 0.3s all ease;
+}
+
+.service_card h2 {
+  color: var(--primary-light);
+}
+.service_card:first-of-type .rbn_btn:is(:hover, :focus) {
+  background-color: var(--accent-pink);
+}
+
+.service_card:nth-of-type(2) .rbn_btn:is(:hover, :focus) {
+  background-color: var(--accent-blue);
+}
+
+.service_card:nth-of-type(3) .rbn_btn:is(:hover, :focus) {
+  background-color: var(--accent-yellow);
+}
+
+.service_card:nth-of-type(4) .rbn_btn:is(:hover, :focus) {
+  background-color: var(--accent-yellow);
+}
+
+.service_card:nth-of-type(5) .rbn_btn:is(:hover, :focus) {
+  background-color: var(--accent-pink);
+}
+
+.service_card:nth-of-type(6) .rbn_btn:is(:hover, :focus) {
+  background-color: var(--accent-blue);
+}
+
+.service_card p {
+  font-size: var(--mdm-L-size);
+  color: white;
+}
+
+.service_card a {
+  padding: 10px 12px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+}
+
+@media all and (max-width: 780px) {
+  .services_cards_wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+
+@media all and (max-width: 480px) {
+  .service_card p {
+    font-size: 17px;
+  }
+  
+  .services_cards_wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .service_card{
+    padding: 20px;
+  }
+
+  .service_card h2{
+    font-size: 23px!important;
+  }
+}
+
+
+@media all and (max-width: 320px) {
+  .services_cards_wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 20px;
+  }
+
+  .service_card{
+    padding: 15px;
+  }
+
+  .service_card h2{
+    font-size: 18px!important;
+  }
+  .service_card a{
+    padding: 4px 9px;
+  }
+  .hero_text_area h1{
+    font-size: 30px!important;
+    padding: 10px;
+  }
+
+  .hero_text_area p{
+    font-size: 15px;
+    padding: 10px!important;
+  }
+
+  .hero_text_area{
+    gap: 20px;
+  }
+
+  .nav_logo{
+    height: 65px;
+  }
+
+  .brgr_icn i{
+    font-size: 30px;
+  }
+
+  .services_container .services_header{
+    font-size: 30px!important;
+    text-align: center;
+  }
+
+ #L_properties .carousel_header h1{
+    font-size: 27px!important;
+    padding-bottom: 20px;
+  }
+
+  .carousel-slide{
+    width: 150px!important;
+    grid-template-rows: 14vh auto!important;
+    box-shadow: 0px 0px 6px #0A3D62;
+  }
+
+  .carousel-container .carousel{
+    padding: 5px!important;
+    min-height: 20vh!important;
+  }
+
+  .carousel-container{
+    padding: 10px;
+  }
+
+  .card_content{
+    font-size: 14px;
+  }
+
+  #footer .get_in_touch h1,
+  #L_properties .carousel_header h1{
+    font-size: calc(var(--lrg-size) - 25px) !important;
+    text-align: center;
+  }
+
+  #L_properties,
+  .L_properties{
+    min-height: 50dvh!important;
+  }
+}
+

@@ -1,0 +1,35 @@
+.slider-images-container {
+  padding: 20px;
+}
+
+.upload-form {
+  margin-bottom: 30px;
+}
+
+.slider-image-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-image-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.slider-image-card .card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.slider-image-card .btn-danger {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .slider-image-card .card-img-top {
+    height: 150px;
+  }
+}

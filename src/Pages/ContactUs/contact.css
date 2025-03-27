@@ -1,0 +1,383 @@
+.contact_main {
+  min-height: calc(100vh - 100px);
+  margin: 30px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 70vh 1fr;
+  background-color: #bbbbbb;
+  grid-column-gap: 20px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.contact_info {
+  border-radius: 20px;
+  background-color: var(--primary-dark);
+  padding: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.contact_main::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-35%, -35%);
+  width: 170px;
+  height: 170px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: url('../../Assets//images//Property_Management.png');
+  background-size: contain;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.contact_main::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(20%, 20%);
+  width: 300px;
+  height: 300px;
+  background-color: var(--accent-blue);
+  z-index: -2;
+  border-radius: 50%;
+}
+.cntct_info_header h1 {
+  font-size: 42px !important;
+  font-weight: 400 !important;
+}
+
+.cntct_info_content span {
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+
+.phone_container span:hover {
+  color: var(--accent-blue);
+}
+
+.email_container span:hover {
+  color: var(--accent-pink);
+}
+
+.location_container span:hover {
+  color: rgb(218, 207, 55);
+}
+.cntct_info_header p {
+  font-size: 22px;
+  margin-top: 20px !important;
+}
+
+.cntct_info_content {
+  font-size: 26px;
+}
+
+.cntct_info_content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.cntct_info_content section {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.cntct_info_content section a {
+  color: white;
+}
+
+.social_icons_container {
+  display: flex;
+  gap: 20px;
+}
+
+.social_icons_container a {
+  text-decoration: none;
+  color: rgb(206, 206, 206);
+  font-size: 30px;
+}
+
+.social_icons_container a i {
+  transition: 0.3s all ease;
+}
+.social_icons_container a:is(:hover, :focus) > i {
+  color: white;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+  height: 80%;
+  gap: 20px;
+}
+
+.contact_form label {
+  display: flex;
+  color: var(--primary-dark);
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 600;
+  width: 65%;
+}
+
+.contact_form label input,
+.contact_form label textarea {
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid var(--primary-dark);
+  font-size: 20px;
+}
+
+.contact_form label input::-webkit-scrollbar,
+.contact_form label textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.contact_form label input {
+  height: 50px;
+}
+.contact_form label textarea {
+  padding-top: 30px;
+}
+
+.cntct_button {
+  width: 29vh;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--primary-dark);
+  color: white;
+  cursor: pointer;
+}
+
+.done-email {
+  max-width: 65vh;
+  font-size: 18px;
+  animation: foute 0.2s linear;
+}
+
+@keyframes foute {
+  0% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.cntct_button svg {
+  width: 1.7em;
+  transform-origin: center;
+  animation: rotate4 2s linear infinite;
+}
+
+.cntct_button svg circle {
+  fill: none;
+  stroke: hsl(0, 0%, 100%);
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash4 {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .contact_main {
+    grid-template-columns: 60vh 1fr;
+  }
+
+  .contact_info {
+    padding: 29px;
+  }
+
+  .done-email {
+    max-width: 45vh;
+  }
+}
+
+@media all and (max-width: 1110px) {
+  .contact_main {
+    grid-template-columns: 50vh 1fr;
+  }
+
+  .cntct_info_header h1 {
+    font-size: 36px;
+  }
+
+  .cntct_info_header p {
+    font-size: 18px;
+  }
+
+  .cntct_info_content {
+    font-size: 20px;
+  }
+
+  .done-email {
+    max-width: 35vh;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .contact_main {
+    height: auto;
+    display: flex;
+    gap: 20px;
+    flex-direction: column-reverse;
+  }
+
+  .contact_main::after,
+  .contact_main::before {
+    display: none;
+  }
+  .contact_info {
+    overflow: visible;
+    gap: 20px;
+    word-break: break-word;
+  }
+
+  .contact_form label input,
+  .contact_form label textarea {
+    width: 100%;
+    font-size: 15px;
+  }
+  .contact_form label {
+    width: 100%;
+  }
+
+  .contact_form label input::placeholder,
+  .contact_form label textarea::placeholder {
+    font-size: 17px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .contact_main {
+    margin: 20px !important;
+    padding: 10px;
+  }
+
+  .cntct_info_header h1 {
+    font-size: 35px !important;
+    padding-bottom: 12px;
+  }
+}
+
+@media all and (max-width: 900px) and (orientation: landscape) {
+  .contact_form label {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .contact_main {
+    margin: 10px !important;
+    padding: 5px;
+  }
+
+  .cntct_info_header h1 {
+    font-size: 28px !important;
+  }
+
+  .cntct_info_header p {
+    font-size: 16px;
+  }
+
+  .cntct_info_content {
+    font-size: 18px;
+  }
+
+  .contact_form label {
+    font-size: 18px;
+  }
+
+  .contact_form label input,
+  .contact_form label textarea {
+    font-size: 14px;
+  }
+
+  .cntct_button {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .social_icons_container a {
+    font-size: 24px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .cntct_info_header h1 {
+    font-size: 24px !important;
+  }
+
+  .cntct_info_header p {
+    font-size: 14px;
+  }
+
+  .cntct_info_content {
+    font-size: 16px;
+  }
+
+  .contact_form label {
+    font-size: 16px;
+  }
+
+  .contact_form label input,
+  .contact_form label textarea {
+    font-size: 13px;
+  }
+
+  .cntct_button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .social_icons_container a {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,10 @@
+.news-page-container{
+    width: 100%;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.news-page-update-button{
+    width: 15%;
+}

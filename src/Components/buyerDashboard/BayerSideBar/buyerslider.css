@@ -1,0 +1,235 @@
+.sidebarparent {
+    width: 270px;
+    height: 100%;
+    background-color: #282828;
+    position: relative;
+    transition-duration: 0.5s;
+  }
+  .sidebarparentclosed {
+    width: 80px;
+    height: 100%;
+    background-color: #282828;
+    position: relative;
+    transition-duration: 1s;
+  }
+  .sidebarbutton {
+    position: absolute;
+    right: -10px;
+    top: 50px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: white;
+  
+    border: 2px solid;
+    border-color: #80adbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sidebarbutton:hover {
+    cursor: pointer;
+  }
+  .sidebararrow {
+    width: 20px;
+    height: 25px;
+    transition-duration: 0.5s;
+  }
+  .sidebararrowclosed {
+    width: 20px;
+    height: 25px;
+    rotate: 180deg;
+    transition-duration: 0.5s;
+  }
+  .sidebarcontainer {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebarlogo {
+    width: 100%;
+    height: 150px;
+  }
+  .sidebarimg {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    overflow: hidden;
+  }
+  
+  .sidebaronlylogo {
+    height: 80%;
+    max-width: 75px;
+    display: flex;
+    margin: 0 auto;
+  
+    object-fit: contain;
+  }
+  .sidebarcontainer {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  
+    height: 100%;
+  }
+  
+  .linkscontainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+    margin-right: 7%;
+    align-items: center;
+    gap: 10px;
+  }
+  .links {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    padding: 6px;
+    text-decoration: none;
+    border-radius: 5px;
+    align-items: center;
+  }
+  .linksclosed {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 6px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .links:hover {
+    background-color: #353232;
+  }
+  .links:focus {
+    background-color: #80adbb;
+  }
+  .linksclosed:hover {
+    background-color: #353232;
+  }
+  .linksclosed:focus {
+    background-color: #80adbb;
+  }
+  .linkimg {
+    width: 42px;
+    height: 42px;
+  }
+  .linktitle {
+    color: #e0e0e2;
+    text-align: start;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    width: 70%;
+  }
+  .titleclosed {
+    display: none;
+  }
+  .logout-button-container{
+     margin: 0px 7% 7% 7%;
+      align-items: center; 
+  }
+  .navbar-body{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+  }
+  
+  .trigger_icn{
+    display: none;
+  }
+  @media screen and (max-width: 1000px) {
+    .sidebarbutton {
+      display: none;
+    }
+  
+    .sidebarparent{
+  
+    }
+  }
+  
+  
+  @media screen and (max-width: 950px) {
+  
+    .adminlayoutparent {
+      position: relative;
+    }
+  
+    .trigger_icn{
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 900;
+    }
+  .users-page-header-container{
+    flex-direction: column;
+    align-items: flex-start!important;
+    gap: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 5px -3px rgba(0, 0, 0, 0.25);
+  }
+  
+  .users-page-header-container > * {
+    width: 45%;
+  }
+  
+  .users-page-header-container input {
+    padding: 6px 8px;
+  }
+    .sidebarparent{
+      position: absolute;
+      transition: .3s all ease;
+      left: -100%;
+      z-index: 100;
+  
+    }
+  
+    .sidebarparent.open{
+      z-index: 100;
+      width: 100%;
+      display: flex;
+      position: absolute;
+      height: 100%;
+      left: 0;
+      transform: translateX(0%);
+      background-color: #282828;
+      justify-content: center;
+    }
+  
+    .linkscontainer{
+      justify-content: center!important;
+      align-items: center;
+    }
+  
+  .links{
+      gap: 0px;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .linktitle{
+      text-align: center;
+    }
+  
+    .navbar-body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+  }
+  
+  .trigger_icn i{
+    font-size: 30px;
+  }
+  }
+  

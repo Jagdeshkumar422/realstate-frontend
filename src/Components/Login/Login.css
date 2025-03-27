@@ -1,0 +1,131 @@
+.loginParent{
+    width: 100dvw;
+    min-height: 100dvh;
+    background-color:#282828;
+    display: flex;
+    padding-bottom: 50px;
+    max-width: 100%;
+    /* justify-content: center; */
+   
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    
+    margin: 0 auto;
+    align-items: center;
+    
+  
+}
+.loginTitle{
+    color: white;
+    
+
+}
+.loginLabel{
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.loginInput{
+    background-color: #282828;
+    font-size: 16px;
+    width: 300px;
+    height: 25px;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid gray;
+    color: white;
+}
+
+.loginImg{
+    margin-top: 45%;
+    margin-bottom: 10%;
+    width: 130px;
+    height: 120px;
+}
+.loginInput:focus{
+    border: 2px solid var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+.loginInput:focus::placeholder{
+    color: var(--accent-blue);
+}
+.inputWrapper{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+
+}
+
+
+
+.loginButton{
+    margin-top: 20px;
+    padding :8px  14px;
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    background-color: var(--accent-blue);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+}
+
+.loginButton:hover{
+    scale: 1.02;
+    cursor: pointer;
+}
+
+
+@media all and (min-width:471px){
+.loginInput{
+    padding :20px  14px;
+}
+}
+
+@media all and (max-width:470px){
+   
+  .loginForm{
+    margin-left: 10%;
+    margin-right: 10%;
+  
+    
+   
+    
+width: 100%;
+  }
+  .inputWrapper{
+    width: 100%;
+    
+  }
+
+  .loginInput{
+    width: 100%;
+    height: 38px;
+    padding-left:5px
+
+}
+
+.loginButton{
+    width: 75%;
+}
+.loginLabel{
+    font-size: 16px;
+}
+
+}
+
+
+.signupbtn{
+    text-align: center;
+    color: white;
+    margin-top: 15px !important;
+}

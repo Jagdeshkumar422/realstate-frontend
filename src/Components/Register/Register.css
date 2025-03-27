@@ -1,0 +1,17 @@
+.inputWrapper select{
+    background-color: #282828;
+    font-size: 16px;
+    width: 300px;
+    height: 45px;
+    outline: none;
+    padding: 0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid gray;
+    color: #6b7280;
+    padding-left: 10px;
+
+ }
+.inputWrapper select option{
+    width: 100% !important;
+}

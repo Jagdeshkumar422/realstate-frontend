@@ -1,0 +1,40 @@
+
+.modal-dialog {
+    max-width: 600px;
+  }
+  
+  .modal-header {
+    background-color: #0a3d62;
+    color: white;
+  }
+  
+  .modal-body {
+    padding: 2rem;
+  }
+  
+  .form-control {
+    border-radius: 0.25rem;
+    border: 1px solid #ddd;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:disabled {
+    background-color: #ccc;
+  }
+  
+  form div {
+    margin-bottom: 8px;
+  }
+
+  form button {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+
+  .btn-close {
+    color: white;
+  }

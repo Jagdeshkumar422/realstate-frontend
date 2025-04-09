@@ -94,7 +94,7 @@ li p i {
 .nav_btns_wrapper {
   display: flex;
   /* flex-direction: column; */
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .nav_btns_wrapper button {
@@ -200,9 +200,10 @@ li p i {
 .dropdown{
   position: absolute;
   top: 50px;
-  right: -180px;
+  right: -100px;
   width: 250px;
 }
+
 
 .dropdown ul{
   display: flex;
@@ -222,6 +223,7 @@ li p i {
     display: block;
     position: relative;
     z-index: 899;
+    font-size: 20px;
   }
 
   .menu-container {
@@ -274,7 +276,7 @@ li p i {
 
   .nav_btns_wrapper {
     gap: 50px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
 
   .nav_logo {

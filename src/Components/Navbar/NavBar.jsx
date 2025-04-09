@@ -118,7 +118,27 @@ const NavBar = () => {
               </Link>
             </li>
           </ul>
-          <div className="nav_btns_wrapper">
+          
+        </ul>
+        
+        <div className="nav_btns_wrapper">
+        <div className="d-flex align-center mt-10">
+          {click && <img src={Logo} alt="Logo" className="mob-logo" />}
+          <div
+            className="brgr_icn"
+            onClick={() => setCLick(!click)}
+          >
+            {click ? (
+             <i class='bx bx-x' ></i>
+            ) : (
+              <div style={{display:'flex',alignItems:'center',gap:5,justifyContent:'center'}}>
+              <i class='bx bx-menu'></i>
+           
+              </div>
+              
+            )}
+          </div>
+        </div>
             {/* <button onClick={handleInq}>Inquiry</button> */}
             {!user.isLoggedIn ? (
               <button onClick={() => navigate('/login')}>Signin/Signup</button>
@@ -140,20 +160,6 @@ const NavBar = () => {
               </div>
             )}
           </div>
-        </ul>
-        <div className="d-flex align-center mt-10">
-          {click && <img src={Logo} alt="Logo" className="mob-logo" />}
-          <div
-            className="brgr_icn"
-            onClick={() => setCLick(!click)}
-          >
-            {click ? (
-              <i className="fa-solid fa-xmark"></i>
-            ) : (
-              <i className="fa-solid fa-bars"></i>
-            )}
-          </div>
-        </div>
       </header>
     </div>
   );

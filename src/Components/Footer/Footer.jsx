@@ -114,7 +114,7 @@ const Footer = () => {
           <div className='copyrights_container'>
             <p>
               Copyright © 2024{' '}
-              <a href='http://www.ce.digital'>Competitive Edge Digital</a> | All
+              <a href='http://www.ce.digital'>MithiMahal</a> | All
               rights reserved |{' '}
               {/* <span
                 tabIndex={0}

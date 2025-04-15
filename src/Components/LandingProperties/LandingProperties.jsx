@@ -80,7 +80,7 @@ const LandingProperties = () => {
                 <>
                   {data?.map((item) => {
                     return (<>
-                      <div key={item._id} className={`carousel-slide`} onClick={()=>{navigate(`/${item?.property_type}/${item._id}`)}}>
+                      <div key={item._id} className={`carousel-slide`} onClick={()=>{navigate(`/property/${item?.property_type}/${item._id}`)}}>
                         <div className="card_image">
                           <img src={item?.image[0]?.url||demo} alt="lol" />
                         </div>

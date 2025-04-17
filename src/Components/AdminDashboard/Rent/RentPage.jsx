@@ -23,6 +23,7 @@ const Rentpage = () => {
     bathrooms: "",
     parkings: "",
     additional_features: "",
+    WhatsAppNumber: "",
     furnished: false,
     description: "",
     status: "",
@@ -55,6 +56,7 @@ const Rentpage = () => {
     bathrooms: "",
     parkings: "",
     additional_features: "",
+    WhatsAppNumber: "",
     furnished: false,
     description: "",
     status: "",
@@ -121,6 +123,7 @@ const Rentpage = () => {
         formData.append("floor", property.floor);
         formData.append("price", property.price);
         formData.append("location", property.location);
+        formData.append("WhatsAppNumber", property.WhatsAppNumber);
         formData.append("furnished", property.furnished);
         formData.append("parkings", property.parkings);
         formData.append("size", property.size);

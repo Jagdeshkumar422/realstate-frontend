@@ -71,9 +71,9 @@ const RentForm = ({
     bathrooms: Yup.number().required().typeError("bathrooms must be a number"),
     parkings: Yup.number().required().typeError("parkings must be a number"),
     price: Yup.number().required().typeError("price must be a number"),
-    unit_type: Yup.string().required('unit type is required'),
-    payment_plan: Yup.string().required('payment plan is required'),
+    WhatsAppNumber: Yup.number().required("whatsapp Number is requiewd"),
     category: Yup.string().required(),
+    address: Yup.string().required("address is required"),
   });
   const handleInputChange = (e) => {
     let { name, value } = e.target;
@@ -136,8 +136,8 @@ const RentForm = ({
               values.parkings>=0 &&
               values.floor>=0 &&
               values.size &&
-              values.unit_type &&
-              values.payment_plan &&
+              values.address &&
+              values.WhatsAppNumber &&
               values.category
             ) {
               setLoading(true)
@@ -226,7 +226,7 @@ const RentForm = ({
                     {errors.appartement_type}
                   </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group controlId='validationFormik04'>
+                {/* <Form.Group controlId='validationFormik04'>
                   <Form.Label>Unit Type</Form.Label>
                   <Form.Control
                     type='text'
@@ -259,7 +259,7 @@ const RentForm = ({
                   <Form.Control.Feedback type='invalid'>
                     {errors.payment_plan}
                   </Form.Control.Feedback>
-                </Form.Group>
+                </Form.Group> */}
                 <Form.Group controlId="validationFormik06">
                   <Form.Label>Floor</Form.Label>
                   <Form.Control
@@ -329,6 +329,42 @@ const RentForm = ({
                     {errors.bathrooms}
                   </Form.Control.Feedback>
                 </Form.Group>
+                <Form.Group controlId="validationFormik05">
+                  <Form.Label>Location (URL)</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="location"
+                    value={values.location}
+                    onChange={(event) => {
+                      handleChange(event);
+                      handleInputChange(event);
+                    }}
+                  />
+                </Form.Group>
+                <Form.Group controlId="validationFormik05">
+                  <Form.Label>Address(area)</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="address"
+                    value={values.address}
+                    onChange={(event) => {
+                      handleChange(event);
+                      handleInputChange(event);
+                    }}
+                  />
+                </Form.Group>
+                <Form.Group controlId="validationFormik05">
+                  <Form.Label>Whatsapp Number</Form.Label>
+                  <Form.Control
+                    type="number"
+                    name="WhatsAppNumber"
+                    value={values.WhatsAppNumber}
+                    onChange={(event) => {
+                      handleChange(event);
+                      handleInputChange(event);
+                    }}
+                  />
+                </Form.Group>
                 <Form.Group controlId="validationFormik10">
                   <Form.Label>Parkings</Form.Label>
                   <Form.Control
@@ -382,30 +418,6 @@ const RentForm = ({
                   />
                 </Form.Group>
 
-                <Form.Group controlId="validationFormik05">
-                  <Form.Label>Location (url)</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="location"
-                    value={values.location}
-                    onChange={(event) => {
-                      handleChange(event);
-                      handleInputChange(event);
-                    }}
-                  />
-                </Form.Group>
-                <Form.Group controlId="validationFormik05">
-                  <Form.Label>Address(area)</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="address"
-                    value={values.address}
-                    onChange={(event) => {
-                      handleChange(event);
-                      handleInputChange(event);
-                    }}
-                  />
-                </Form.Group>
                 <Form.Group controlId='validationFormik05'>
                   <Form.Label>Handover Date</Form.Label>
                   <Form.Control

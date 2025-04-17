@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Login/Login.css";
 import "./Register.css";
 import Logo from "../../Assets/images/OnlyLogo.png";
@@ -8,6 +8,7 @@ import { showToast } from "../../Utils/showToast";
 import { APP_CONFIG } from "../../config";
 
 const Register = () => {
+  let navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -49,6 +50,8 @@ const Register = () => {
       });
 
       showToast(response.data.message || "Registration successful!");
+      navigate("/login")
+      
       // Reset the form after successful registration
       setUser({ name: "", email: "", password: "", confirmPassword: "", role: "" });
     } catch (err) {

@@ -37,6 +37,7 @@ const Buypage = () => {
     bathrooms: "",
     parkings: "",
     additional_features: "",
+    WhatsAppNumber: "",
     furnished: false,
     description: "",
     status: "",
@@ -71,6 +72,7 @@ const Buypage = () => {
     bathrooms: "",
     parkings: "",
     additional_features: "",
+    WhatsAppNumber:"",
     furnished: false,
     description: "",
     status: "",
@@ -136,6 +138,7 @@ const Buypage = () => {
         formData.append("hand_over_date", property.hand_over_date ? property.hand_over_date : "Soon");
         formData.append("floor", property.floor);
         formData.append("price", property.price);
+        formData.append("WhatsAppNumber", property.WhatsAppNumber);
         formData.append("location", property.location);
         formData.append("address",property.address)
         formData.append("furnished", property.furnished);

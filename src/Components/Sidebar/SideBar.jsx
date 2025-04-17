@@ -29,7 +29,7 @@ const SideBar = ({ trigger }) => {
     { title: "Rent", nav: "/rent", img: Rent },
     // { title: "Sub offplan", nav: "/suboffplan", img: SubOffplan },
     { title: "Users", nav: "/users", img: Users },
-    { title: "Inquiries", nav: "/inquiries", img: Inquiry },
+    // { title: "Inquiries", nav: "/inquiries", img: Inquiry },
     { title: "News", nav: "/news", img: Inquiry },
   ];
   return (

@@ -94,11 +94,11 @@ const Singlepage = () => {
     );
   };
 
-  const phoneNumber = "+971 52 727 9898";
+  // const phoneNumber = `+92${}`;
 
-  const handleCall = () => {
-    window.location.href = `tel:${phoneNumber}`;
-  };
+  // const handleCall = () => {
+  //   window.location.href = `tel:${phoneNumber}`;
+  // };
 
   return (
     <>
@@ -274,12 +274,14 @@ const Singlepage = () => {
 
             {user.isLoggedIn && (
               <div className="single-buttons">
-                <a href={`https://wa.me/+971527279898`}>
+                <a href={`https://wa.me/+92${property.WhatsAppNumber}`}>
                   <button type="button" className="buttonag rb_btn">
                     Whatsapp
                   </button>
                 </a>
-                <button onClick={handleCall} className="buttonag rb_btn">
+                <button onClick={()=>{
+                   window.location.href = `tel:+92${property.WhatsAppNumber}`;
+                }} className="buttonag rb_btn">
                   Call
                 </button>
                 <button

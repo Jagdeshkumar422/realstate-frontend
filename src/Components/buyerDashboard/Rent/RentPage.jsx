@@ -44,6 +44,7 @@ const Rentpage = () => {
     unit_type: "",
     payment_plan: "",
     hand_over_date: "",
+    WhatsAppNumber: "",
     rented_by:"",
     address:""
   };
@@ -76,6 +77,7 @@ const Rentpage = () => {
     neighborhood: "",
     unit_type: "",
     payment_plan: "",
+    WhatsAppNumber:"",
     hand_over_date: "",
     rented_by:"",
     address:""
@@ -137,6 +139,7 @@ const Rentpage = () => {
         formData.append("floor", property.floor);
         formData.append("price", property.price);
         formData.append("location", property.location);
+        formData.append("WhatsAppNumber", property.WhatsAppNumber);
         formData.append("furnished", property.furnished);
         formData.append("parkings", property.parkings);
         formData.append("size", property.size);

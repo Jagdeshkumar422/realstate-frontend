@@ -32,7 +32,7 @@
 
 .cat_card_container img {
   height: 100%;
-  width: 320px;
+  width: 100%;
   object-fit: cover;
   object-position: center;
   border-top-left-radius: 10px;
@@ -94,15 +94,22 @@
   .properties_content {
     gap: 20px !important;
   }
+   .cat_card_container{
+    width: 45%;
+  }
 }
 @media all and  (max-width: 500px) {
   .auto_width {
     width: 85% !important;
   }
+ 
 }
 
 @media all and  (max-width: 700px) {
   .secondary_info_section p{
     font-size: clamp(0.8125rem, 0.6676rem + 0.7246vw, 1.4375rem);
+  }
+   .cat_card_container{
+    width: 95%;
   }
 }

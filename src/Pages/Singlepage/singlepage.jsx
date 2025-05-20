@@ -39,6 +39,7 @@ const Singlepage = () => {
   if (token) {
     const decodedToken = jwtDecode(token);
     userId = decodedToken?.userId;
+    // console.log(userId)
   }
   const type = params.type;
   let id = params.id;
@@ -50,11 +51,13 @@ const Singlepage = () => {
   const toggleModal = () => {
     setShowModal(!showModal);
   };
-
+console.log("user", userId)
+console.log("property_id", property._id)
+console.log("property_user", property.user)
   const closeModal = () => {
     setShowModal(false);
   };
-  console.log(property.user);
+  // console.log(property.user);
   useEffect(() => {
     const getItem = async () => {
       try {
